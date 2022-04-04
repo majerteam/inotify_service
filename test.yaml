@@ -1,0 +1,10 @@
+- script: "echo {path}"
+  directory: "/tmp"
+  events:
+    - "MODIFY"
+    - "CREATE"
+- script: "echo {path}"
+  directory: "/home/gas/tmp/"
+  events:
+    - "MODIFY"
+    - "CREATE"
