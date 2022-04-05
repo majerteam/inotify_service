@@ -1,0 +1,13 @@
+[Unit]
+# Human readable name of the unit
+Description=Asynchronous Inotify Service
+
+[Service]
+# Command to execute when the service is started
+ExecStart=/usr/local/inotify_env/bin/inotify-service-start
+Environment=PYTHONUNBUFFERED=1
+Environment=INOTIFY_SERVICE_PATH=/etc/inotify_service/conf.d
+Environment=INOTIFY_SERVICE_LOG_CONFIG=/etc/inotify_service/log.conf
+
+[Install]
+WantedBy=default.target

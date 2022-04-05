@@ -1,7 +1,10 @@
 from distutils.core import setup
 from setuptools import find_packages
 
-entry_points = {"console_scripts": ["inotify_service_start = inotify_service:run"]}
+entry_points = {"console_scripts": ["inotify-service-start = inotify_service:run"]}
+
+with open('./requirements.txt', 'r') as fbuf:
+    requirements = fbuf.read().splitlines()
 
 setup(
     name="inotify_service",
@@ -20,6 +23,6 @@ setup(
     url="https://github.com/tonthon/inotify_service",
     packages=find_packages(),
     zip_safe=True,
-    install_requires=["asyncinotify", "pyyaml"],
+    install_requires=requirements,
     entry_points=entry_points,
 )

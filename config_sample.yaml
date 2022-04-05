@@ -1,0 +1,10 @@
+- script: "sleep 2 | echo {path} > /tmp/titi.log"
+  directory: "/tmp"
+  pattern: "[a-z0-9_]+\\.pdf$"
+  events:
+    - "CLOSE_WRITE"
+    - "MOVED_TO"
+- script: "echo {path}"
+  directory: "/home/gas/tmp/"
+  events:
+    - "CLOSE_WRITE"
