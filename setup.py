@@ -13,7 +13,7 @@ with open("./requirements.txt", "r") as fbuf:
 
 setup(
     name="inotify_service",
-    version="1.0.0",
+    version="1.0.1",
     description="Run scripts responding to inotify events",
     long_description=README,
     author="Gaston Tjebbes",
