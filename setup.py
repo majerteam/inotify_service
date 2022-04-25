@@ -16,7 +16,7 @@ setup(
     classifiers=[
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Programming Language :: Python",
-        "Operating System :: Linux",
+        "Operating System :: Unix",
     ],
     python_requires=">=3.6",
     keywords="inotify incron asyncio",
