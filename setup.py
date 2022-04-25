@@ -1,7 +1,12 @@
+import os
 from distutils.core import setup
 from setuptools import find_packages
 
 entry_points = {"console_scripts": ["inotify-service-start = inotify_service:run"]}
+
+here = os.path.abspath(os.path.dirname(__file__))
+with open(os.path.join(here, "README.rst")) as f:
+    README = f.read()
 
 with open("./requirements.txt", "r") as fbuf:
     requirements = fbuf.read().splitlines()
@@ -10,6 +15,7 @@ setup(
     name="inotify_service",
     version="1.0.0",
     description="Run scripts responding to inotify events",
+    long_description=README,
     author="Gaston Tjebbes",
     author_email="g.t@majerti.fr",
     license="GPLv3",
