@@ -15,6 +15,7 @@ Install
     apt-get install python3-venv
     python3 -m venv /usr/local/inotify_service_venv
     source /usr/local/inotify_service_venv/bin/activate
+    pip install inotify_service
 
 Setup
 -------
