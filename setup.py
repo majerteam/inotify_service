@@ -3,12 +3,12 @@ from setuptools import find_packages
 
 entry_points = {"console_scripts": ["inotify-service-start = inotify_service:run"]}
 
-with open('./requirements.txt', 'r') as fbuf:
+with open("./requirements.txt", "r") as fbuf:
     requirements = fbuf.read().splitlines()
 
 setup(
     name="inotify_service",
-    version="0.0.1",
+    version="1.0.0",
     description="Run scripts responding to inotify events",
     author="Gaston Tjebbes",
     author_email="g.t@majerti.fr",
@@ -20,7 +20,7 @@ setup(
     ],
     python_requires=">=3.6",
     keywords="inotify incron asyncio",
-    url="https://github.com/tonthon/inotify_service",
+    url="https://github.com/majerteam/inotify_service",
     packages=find_packages(),
     zip_safe=True,
     install_requires=requirements,
