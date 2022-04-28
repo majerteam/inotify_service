@@ -22,7 +22,7 @@ class InotifyService:
             logger.debug("  -> File not handled")
             return
         command: Command = Command(handler.script)
-        await ActionRunner(command).run(path=event.path, name=event.name)
+        await ActionRunner(command).run(path=event.path, name=event.name, filename=event.path.name)
 
     def _find_handler_by_path(self, path: Path) -> InotifyHandler:
         """Find a handler by its path on disk"""

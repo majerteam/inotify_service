@@ -55,6 +55,7 @@ Mandatory parameters:
 *script* : The command to launch, the following parameters are passed
 
 - path : The absolute path on disk
+- filename: The name of the file
 - name : The event name (CLOSE_WRITE ...)
 
 *directory* : The directory to watch
